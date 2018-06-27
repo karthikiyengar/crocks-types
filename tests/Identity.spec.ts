@@ -30,7 +30,7 @@ Identity(5).chain(() => Identity(5))
 Identity(5).ap(10)
 
 // @dts-jest:pass:snap
-Identity(a => b => a + b).ap(Identity.of(10)).ap(Identity.of(10))
+Identity((a: any) => (b: any) => a + b).ap(Identity.of(10)).ap(Identity.of(10)) // ideally a and b should receive types
 
 // @dts-jest:fail:snap
 Identity(5).ap(Identity.of(10))

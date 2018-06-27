@@ -2,6 +2,8 @@
 
 exports[`Identity("a string").map((v) => v * 2) (type) should match snapshot: Identity("a string").map((v) => v * 2) 1`] = `"The left-hand side of an arithmetic operation must be of type 'any', 'number' or an enum type."`;
 
+exports[`Identity((a: any) => (b: any) => a + b).ap(Identity.of(10)).ap(Identity.of(10)) (type) should match snapshot: Identity((a: any) => (b: any) => a + b).ap(Identity.of(10)).ap(Identity.of(10)) 1`] = `"import(\\"crocks\\").IdentityInstance<number>"`;
+
 exports[`Identity(5) (type) should match snapshot: Identity(5) 1`] = `"import(\\"crocks\\").IdentityInstance<number>"`;
 
 exports[`Identity(5).ap(10) (type) should match snapshot: Identity(5).ap(10) 1`] = `"Argument of type '10' is not assignable to parameter of type 'IdentityInstance<{}>'."`;
@@ -21,7 +23,21 @@ exports[`Identity(5).map("whatever") (type) should match snapshot: Identity(5).m
 
 exports[`Identity(5).map(() => "") (type) should match snapshot: Identity(5).map(() => "") 1`] = `"import(\\"crocks\\").IdentityInstance<string>"`;
 
+exports[`Identity(5).sequence(5) (type) should match snapshot: Identity(5).sequence(5) 1`] = `"any"`;
+
+exports[`Identity(5).sequence(Identity) (type) should match snapshot: Identity(5).sequence(Identity) 1`] = `"any"`;
+
+exports[`Identity(5).traverse(() => 5, undefined) (type) should match snapshot: Identity(5).traverse(() => 5, undefined) 1`] = `"any"`;
+
+exports[`Identity(5).traverse(5, Identity) (type) should match snapshot: Identity(5).traverse(5, Identity) 1`] = `"Argument of type '5' is not assignable to parameter of type '(t: number) => {}'."`;
+
+exports[`Identity(5).valueOf() (type) should match snapshot: Identity(5).valueOf() 1`] = `"number"`;
+
 exports[`Identity.of("Hello") (type) should match snapshot: Identity.of("Hello") 1`] = `"import(\\"crocks\\").IdentityInstance<string>"`;
+
+exports[`Identity.type() (type) should match snapshot: Identity.type() 1`] = `"string"`;
+
+exports[`Identity.type(10) (type) should match snapshot: Identity.type(10) 1`] = `"Expected 0 arguments, but got 1."`;
 
 exports[`Math.max('123') (type) should match snapshot: Math.max('123') 1`] = `"Argument of type '\\"123\\"' is not assignable to parameter of type 'number'."`;
 
