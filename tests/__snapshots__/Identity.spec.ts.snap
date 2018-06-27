@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Identity("a string").map((v) => v * 2) (type) should match snapshot: Identity("a string").map((v) => v * 2) 1`] = `"The left-hand side of an arithmetic operation must be of type 'any', 'number' or an enum type."`;
+
+exports[`Identity(5) (type) should match snapshot: Identity(5) 1`] = `"import(\\"crocks\\").IdentityInstance<number>"`;
+
+exports[`Identity(5).ap(10) (type) should match snapshot: Identity(5).ap(10) 1`] = `"Argument of type '10' is not assignable to parameter of type 'IdentityInstance<{}>'."`;
+
+exports[`Identity(5).ap(Identity.of(10)) (type) should match snapshot: Identity(5).ap(Identity.of(10)) 1`] = `"import(\\"crocks\\").IdentityInstance<number>"`;
+
+exports[`Identity(5).chain("") (type) should match snapshot: Identity(5).chain("") 1`] = `"Argument of type '\\"\\"' is not assignable to parameter of type '(t: number) => IdentityInstance<{}>'."`;
+
+exports[`Identity(5).chain(() => 10) (type) should match snapshot: Identity(5).chain(() => 10) 1`] = `
+"Argument of type '() => number' is not assignable to parameter of type '(t: number) => IdentityInstance<{}>'.
+  Type 'number' is not assignable to type 'IdentityInstance<{}>'."
+`;
+
+exports[`Identity(5).chain(() => Identity(5)) (type) should match snapshot: Identity(5).chain(() => Identity(5)) 1`] = `"import(\\"crocks\\").IdentityInstance<number>"`;
+
+exports[`Identity(5).map("whatever") (type) should match snapshot: Identity(5).map("whatever") 1`] = `"Argument of type '\\"whatever\\"' is not assignable to parameter of type '(t: number) => {}'."`;
+
+exports[`Identity(5).map(() => "") (type) should match snapshot: Identity(5).map(() => "") 1`] = `"import(\\"crocks\\").IdentityInstance<string>"`;
+
+exports[`Identity.of("Hello") (type) should match snapshot: Identity.of("Hello") 1`] = `"import(\\"crocks\\").IdentityInstance<string>"`;
+
+exports[`Math.max('123') (type) should match snapshot: Math.max('123') 1`] = `"Argument of type '\\"123\\"' is not assignable to parameter of type 'number'."`;
+
+exports[`Math.max(1) (type) should match snapshot: Math.max(1) 1`] = `"number"`;

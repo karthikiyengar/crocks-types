@@ -1,0 +1,29 @@
+{
+  "name": "@types/crocks",
+  "version": "0.9.4",
+  "description": "TypeScript's type definitions for crocks",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config ./jest.json"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts"
+    ],
+    "testRegex": "/tests/.+\\.ts$",
+    "transform": {
+      "/tests/.+\\.ts$": "dts-jest/transform"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crocks": "^0.9.4"
+  },
+  "devDependencies": {
+    "dts-jest": "^22.0.3",
+    "jest": "^23.2.0",
+    "ts-jest": "^22.4.6",
+    "typescript": "^2.9.2"
+  }
+}
