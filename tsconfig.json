@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "strict": true,
     "strictFunctionTypes": false,
     "target": "es6",
     "module": "commonjs",
-    "typeRoots": [ "./templates", "./node_modules/@types"]
+    "moduleResolution": "node",
+    "typeRoots": [ "./dist", "./node_modules/@types"]
   },
 }

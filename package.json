@@ -4,7 +4,8 @@
   "description": "TypeScript's type definitions for crocks",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config ./jest.json"
+    "test": "jest --config ./jest.json",
+    "build": "gulp"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -18,12 +19,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "crocks": "^0.9.4"
+    "crocks": "^0.9.4",
+    "dts-element": "^2.3.2",
+    "dts-element-fp": "^1.2.0",
+    "gulp": "^4.0.0",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
-    "dts-jest": "^22.0.3",
+    "@types/node": "^10.5.8",
+    "dts-jest": "^22.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-insert": "^0.5.0",
     "jest": "^23.2.0",
     "ts-jest": "^22.4.6",
-    "typescript": "^2.9.2"
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
   }
 }
