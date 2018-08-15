@@ -1,8 +1,8 @@
 {
     "testEnvironment": "node",
     "moduleFileExtensions": ["ts", "js", "json"],
-    "testRegex": "/tests/.+\\.ts$",
-    "transform": {"/tests/.+\\.ts$": "dts-jest/transform"},
+    "testRegex": "spec.ts$",
+    "transform": {"spec.ts$": "dts-jest/transform"},
     "globals": {
       "_dts_jest_": {
         "enclosing_declaration": true,
@@ -13,4 +13,4 @@
       "default",
       "dts-jest/reporter"
     ]
-  }
+}

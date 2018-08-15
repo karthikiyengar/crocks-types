@@ -4,6 +4,10 @@
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
-    "typeRoots": [ "./dist", "./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": ".",
   },
+  "exclude": [
+    "dist/**/*"
+  ]
 }

@@ -4,6 +4,6 @@ declare module "crocks-static" {
 
 declare module "crocks/pointfree/propPath" {
     import * as crocks from 'crocks-static'
-    const propPath: typeof crocks.propPath;
+    export const propPath: typeof crocks.propPath;
     export default propPath;
 }

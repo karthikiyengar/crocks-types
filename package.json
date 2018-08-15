@@ -5,16 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --config ./jest.json",
+    "dev": "gulp watch",
     "build": "gulp"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts"
-    ],
-    "testRegex": "/tests/.+\\.ts$",
-    "transform": {
-      "/tests/.+\\.ts$": "dts-jest/transform"
-    }
   },
   "author": "",
   "license": "ISC",

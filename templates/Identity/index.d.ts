@@ -18,3 +18,10 @@ declare module "crocks-static" {
         type: () => string
     }
 }
+
+
+declare module "crocks/Identity" {
+    import * as crocks from 'crocks-static'
+    const Identity: typeof crocks.Identity;
+    export default Identity;
+}
